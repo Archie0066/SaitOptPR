@@ -1,6 +1,5 @@
 const sheetUrls = [
-  'https://docs.google.com/spreadsheets/d/16qzBLyi0hvPna5YPZxIqfBi_HYl4ezUarPLR97k6RWQ/edit?usp=sharing', // моя таблица 
-  'https://docs.google.com/spreadsheets/d/1XiKE2moWTC0ulSzEyTKD5sKUIaeTBGPrCH3yOXgHk4M/edit?usp=sharing' // таблица Деревяги
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUXau2tPe1749501W_g_CRNePsz9snloT7royNPt8L441VzhtCEHfCgcUZxa3bWBNDYb10ctatF6si/pub?output=csv'
 ];
 
 let currentIndex = 0;
