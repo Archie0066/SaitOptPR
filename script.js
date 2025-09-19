@@ -1,6 +1,5 @@
 const sheetUrls = [
 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUXau2tPe1749501W_g_CRNePsz9snloT7royNPt8L441VzhtCEHfCgcUZxa3bWBNDYb10ctatF6si/pub?output=csv'
-  // 2-й слайд: лидер дня
 
 ];
 
@@ -17,10 +16,8 @@ async function loadAllSheets() {
     let content;
 
     if (i === 0) {
-      // первый слайд = таблица
       content = renderTable(data);
     } else {
-      // второй слайд = карточка лидера дня
       content = renderLeaderCard(data);
     }
 
@@ -65,17 +62,14 @@ function renderTable(data) {
 }
 
 function renderLeaderCard(data) {
-  // предполагаем, что заголовки в первой строке
   const headers = data[0];
   const rows = data.slice(1);
 
-  // ищем колонку "Очки" (или "Score")
   const scoreIndex = headers.findIndex(h => /очк|score/i.test(h));
   if (scoreIndex === -1) {
     return document.createTextNode("Не найдена колонка 'Очки'");
   }
 
-  // находим лидера
   let leader = rows[0];
   let maxScore = parseFloat(rows[0][scoreIndex]) || 0;
 
@@ -87,7 +81,6 @@ function renderLeaderCard(data) {
     }
   }
 
-  // создаём карточку
   const card = document.createElement('div');
   card.classList.add('leader-card');
 
