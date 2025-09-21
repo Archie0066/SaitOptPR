@@ -1,4 +1,8 @@
-const sheetUrls = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBc6F7PeogNf_R0i_CvNAuKsDAugTAej-etqTmKqg9CU2u16f7DIDYhSvf4hRTmAHqXttKvP9C_7Re/pub?output=csv';
+const sheetUrls = [
+'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBc6F7PeogNf_R0i_CvNAuKsDAugTAej-etqTmKqg9CU2u16f7DIDYhSvf4hRTmAHqXttKvP9C_7Re/pub?output=tsv'
+  // 2-й слайд: лидер дня
+
+];
 
 let currentIndex = 0;
 let slides = [];
