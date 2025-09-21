@@ -1,7 +1,5 @@
 const sheetUrls = [
-'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUXau2tPe1749501W_g_CRNePsz9snloT7royNPt8L441VzhtCEHfCgcUZxa3bWBNDYb10ctatF6si/pub?output=csv'
-  // 2-й слайд: лидер дня
-
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBc6F7PeogNf_R0i_CvNAuKsDAugTAej-etqTmKqg9CU2u16f7DIDYhSvf4hRTmAHqXttKvP9C_7Re/pub?output=csv' // исправлено на латинскую "c"
 ];
 
 let currentIndex = 0;
