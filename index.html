@@ -53,38 +53,75 @@
       0% { background-position: 0 0, 0 0; }
       100% { background-position: 1000px 1000px, 500px 500px; }
     }
-    h1 {
-      font-family: 'Orbitron', 'Arial', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #4fc3f7;
-      text-align: center;
-      text-shadow: 
-        0 0 10px #2196f3,
-        0 0 20px #2196f3,
-        0 0 30px #2196f3,
-        2px 2px 0px #7b1fa2;
-      margin: 25px 0;
-      padding: 15px;
-      letter-spacing: 2px;
-      background: linear-gradient(to right, #0d47a1, #7b1fa2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      position: relative;
-}
+    
+      h1 {
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    
+ 
+    background: linear-gradient(135deg, 
+      #4fc3f7 0%, 
+      #64ffda 25%, 
+      #82b1ff 50%, 
+      #d500f9 75%, 
+      #ff4081 100%);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+   
+    text-shadow: 
+      0 0 10px rgba(79, 195, 247, 0.3),
+      0 0 20px rgba(100, 255, 218, 0.2),
+      0 0 30px rgba(130, 177, 255, 0.1),
+      2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+   
+    background-size: 200% 200%;
+    animation: cosmicFlow 12s ease infinite;
+  }
+      h1::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        color: transparent;
+        z-index: -1;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      }
 
-    h1::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 25%;
-      width: 50%;
-      height: 3px;
-      background: linear-gradient(to right, transparent, #4fc3f7, transparent);
-      box-shadow: 0 0 15px #4fc3f7;
-}
+      h1::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 30%;
+        width: 40%;
+        height: 2px;
+        background: linear-gradient(90deg, 
+          transparent, 
+          rgba(79, 195, 247, 0.6), 
+          rgba(100, 255, 218, 0.6), 
+          rgba(130, 177, 255, 0.6), 
+          transparent);
+        border-radius: 1px;
+        box-shadow: 0 0 15px rgba(79, 195, 247, 0.4);
+        animation: nebulaGlow 4s ease-in-out infinite;
+      }
 
+    @keyframes cosmicFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
     .decoration {
       position: absolute;
       z-index: 0;
